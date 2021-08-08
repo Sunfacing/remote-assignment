@@ -106,6 +106,7 @@ main {
     padding: 5px 5px 5px 25px;
     top: 15%;
     left: 15%;
+    outline: none;
 }
 
 
@@ -169,6 +170,11 @@ main {
     border-radius: 12px;
 } 
 
+
+/* #activity {
+    display: none;
+}
+ */
 
 footer {
     /* margin-bottom: -50px; */

@@ -10,16 +10,37 @@ Note:
 should have each key only once.
 """
 
+from collections import defaultdict
 
+# define this to make dick[key] begins with a value 0
+def zero():
+    return 0
+
+
+"""
+Solution 1: regular
+
+"""
+# def count(input):
+#     dict = {}
+#     for ch in input:
+#         if ch not in dict:
+#             dict[ch] = 1
+#         else:
+#             dict[ch] += 1
+#     return dict
+
+
+"""
+Solution 2: implement by defaultdict
+"""
+dict = defaultdict(zero)
 
 def count(input):
-    dict = {}
     for ch in input:
-        if ch not in dict:
-            dict[ch] = 1
-        else:
-            dict[ch] += 1
+        dict[ch] += 1
     return dict
+
 
 
 input1 = ['a', 'b', 'c', 'a', 'c', 'a', 'x']
@@ -28,16 +49,39 @@ print(count(input1)) # should print {'a': 3, 'b': 1, 'c': 2, 'x': 1}
 
 
 
+
+
+
+"""
+Solution 1: regular
+
+"""
+# def group_by_key(input):
+#     dict = {}
+#     for i in range(len(input)):
+#         key = input[i]['key']
+#         value = input[i]['value']
+#         if key not in dict.keys():
+#             dict[key] = value
+#         else:
+#             dict[key] += value
+#     return dict
+
+
+
+"""
+Solution 2: implement by defaultdict
+"""
+counter_dict = defaultdict(zero)
+
 def group_by_key(input):
-    dict = {}
     for i in range(len(input)):
         key = input[i]['key']
         value = input[i]['value']
-        if key not in dict.keys():
-            dict[key] = value
-        else:
-            dict[key] += value
-    return dict
+        counter_dict[key] += value
+    return counter_dict
+
+
 
 
 input2 = [
