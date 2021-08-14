@@ -1,0 +1,22 @@
+<html>
+
+   <head>
+      <title>index</title>
+      <link rel="stylesheet" href="/static/stylesheet.css">
+   </head>
+   
+   <body>
+      <div class='content'>
+         {% block content %}
+         <h1 class='list'>{{ greeting }}</h1>
+         <ul class='list'>
+            <li><a href="{{ url_for('data') }}">Assignment-2: Build Backend API for Front-End</a></li>
+            <li><a href="{{ url_for('sum') }}">Assignment-3: Connect to Backend API by AJAX</a></li></li>
+            <li><a href="{{ url_for('login') }}">Assignment-4: HTTP Cookie</a></li>
+         {% endblock %}
+         </ul>
+         <script src="/static/script.js"></script>
+      </div>
+   </body>
+   
+</html>

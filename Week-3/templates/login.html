@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+
+{% block content %}
+<form action = "/trackName" method = "POST" class="list">
+    <label for="user_name" class='label'>Name:</label> 
+    <input type = 'text' name = 'name' id='user_name'>
+    <input type = 'submit' value = 'Store Your Cookie'>
+</form>
+{% endblock %}
